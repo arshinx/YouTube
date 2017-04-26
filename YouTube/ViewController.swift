@@ -122,6 +122,9 @@ class VideoCell: UICollectionViewCell {
         // Add User Profile Image View to View hierarchy
         addSubview(userProfileImageView)
         
+        // Add Title Label to View hierarchy
+        addSubview(titleLabel)
+        
         // Add Padding for Thumbnail Image View
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)
 
