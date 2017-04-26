@@ -98,11 +98,14 @@ class VideoCell: UICollectionViewCell {
     
     func setupViews() {
         
-        // Add Image View to View hierarchy
+        // Add Thumbnail Image View to View hierarchy
         addSubview(thumbnailImageView)
         
         // Add Separator View to Hierarchy
         addSubview(seperatorView)
+        
+        // Add User Profile Image View to View hierarchy
+        addSubview(userProfileImageView)
         
         // Add Padding for Thumbnail Image View
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)
