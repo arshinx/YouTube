@@ -55,6 +55,9 @@ class VideoCell: UICollectionViewCell {
     
     func setupViews() {
         
+        // Set BG Color to Blue
+        backgroundColor = UIColor.blue
+        
         // addSubview(view: UIView)
     }
     
