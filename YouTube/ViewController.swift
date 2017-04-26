@@ -139,6 +139,9 @@ class VideoCell: UICollectionViewCell {
         
         // Add Padding for Separator
         addConstraintsWithFormat(format: "H:|[v0]|", views: seperatorView)
+        
+        // Title Label - Top Constraints
+        addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: thumbnailImageView, attribute: .bottom, multiplier: 1, constant: 8))
     }
     
     required init?(coder aDecoder: NSCoder) {
