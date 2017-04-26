@@ -18,6 +18,12 @@ class HomeController: UICollectionViewController {
         
         collectionView?.backgroundColor = UIColor.white
     }
+    
+    // Number of items
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 5 // automate in future
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
