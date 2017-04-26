@@ -63,7 +63,7 @@ class VideoCell: UICollectionViewCell {
         
         // return image view
         return imageView
-    }
+    }()
     
     func setupViews() {
         
