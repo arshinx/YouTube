@@ -53,6 +53,12 @@ class VideoCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupViews()
+    }
+    
+    func setupViews() {
+        
+        // addSubview(view: UIView)
     }
     
     required init?(coder aDecoder: NSCoder) {
