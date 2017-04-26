@@ -67,8 +67,16 @@ class VideoCell: UICollectionViewCell {
     
     func setupViews() {
         
+        // Add Image View to View hierarchy
         addSubview(thumbnailImageView)
+        
+        // Add Padding
+        
+        
+        // Set Image view frame bounds
         thumbnailImageView.frame = CGRect.init(x: 0, y: 0, width: 100, height: 100)
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
