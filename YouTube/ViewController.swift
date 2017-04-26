@@ -16,6 +16,9 @@ class HomeController: UICollectionViewController {
         // Set Nav title to Home
         navigationItem.title = "Home"
         
+        // Register Cell ID
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+        
         collectionView?.backgroundColor = UIColor.white
     }
     
