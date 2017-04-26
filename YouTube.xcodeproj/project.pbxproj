@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -96,13 +96,12 @@
 				TargetAttributes = {
 					736272081EB1382D0092AF05 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 29YN3QBTM8;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 736272041EB1382D0092AF05 /* Build configuration list for PBXProject "YouTube" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -265,6 +264,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 29YN3QBTM8;
 				INFOPLIST_FILE = YouTube/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Arshin.YouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +278,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 29YN3QBTM8;
 				INFOPLIST_FILE = YouTube/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Arshin.YouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
