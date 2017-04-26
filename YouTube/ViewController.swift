@@ -101,7 +101,7 @@ class VideoCell: UICollectionViewCell {
         
         // Add Padding for Separator
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": seperatorView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0(1)|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": seperatorView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0(1)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": seperatorView]))
     }
     
     required init?(coder aDecoder: NSCoder) {
