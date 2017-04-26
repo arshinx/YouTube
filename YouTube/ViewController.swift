@@ -96,6 +96,11 @@ class VideoCell: UICollectionViewCell {
         
     }()
     
+    // Title Label
+    
+    
+    // Sub Title Label
+    
     func setupViews() {
         
         // Add Thumbnail Image View to View hierarchy
