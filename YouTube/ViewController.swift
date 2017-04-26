@@ -55,6 +55,7 @@ class VideoCell: UICollectionViewCell {
     
     // Views
     
+    // Thumbnail Image View
     let thumbnailImageView : UIImageView = {
         
         // initialize image view
@@ -65,6 +66,20 @@ class VideoCell: UICollectionViewCell {
         
         // return image view
         return imageView
+    }()
+    
+    // User Profile Image View
+    let userProfileImageView : UIImageView = {
+        
+        // initialize image view
+        let imageView = UIImageView()
+        
+        // Set BG Color to blue
+        imageView.backgroundColor = UIColor.blue
+        
+        // return image view
+        return imageView
+        
     }()
     
     // Seperator
