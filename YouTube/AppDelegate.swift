@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // layout for collection view
         let layout = UICollectionViewFlowLayout()
         
-        window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout)
+        window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
         
         
         return true
