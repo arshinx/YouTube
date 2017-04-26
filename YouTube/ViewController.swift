@@ -105,6 +105,9 @@ class VideoCell: UICollectionViewCell {
         // Purple BG
         label.backgroundColor = UIColor.purple
         
+        // Prevent Conversion of contraints
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
         // Return Label
         return label
     }()
