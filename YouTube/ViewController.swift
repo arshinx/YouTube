@@ -71,7 +71,7 @@ class VideoCell: UICollectionViewCell {
     }()
     
     // Seperator
-    let seperatorView = UIView = {
+    let seperatorView : UIView = {
         
         // Initialize View
         let view = UIView()
