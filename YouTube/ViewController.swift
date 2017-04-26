@@ -106,7 +106,7 @@ class VideoCell: UICollectionViewCell {
         label.backgroundColor = UIColor.purple
         
         // Prevent Conversion of contraints
-        view.translatesAutoresizingMaskIntoConstraints = false
+        label.translatesAutoresizingMaskIntoConstraints = false
         
         // Return Label
         return label
@@ -142,6 +142,9 @@ class VideoCell: UICollectionViewCell {
         
         // Title Label - Top Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: thumbnailImageView, attribute: .bottom, multiplier: 1, constant: 8))
+        
+        addConstraintsWithFormat(format: "V:[v0(20)]", views: titleLabel)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: titleLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
