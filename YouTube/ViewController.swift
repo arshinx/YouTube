@@ -115,5 +115,9 @@ class VideoCell: UICollectionViewCell {
 // Extend UIVIew
 extension UIView {
     
+    // Add a simplified method to prevent repetition #DRY
+    func addConstraintsWithFormat(format: String, view: UIView...) {
+        
+    }
 }
 
