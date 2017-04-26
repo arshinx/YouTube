@@ -110,8 +110,11 @@ class VideoCell: UICollectionViewCell {
         // Add Padding for Thumbnail Image View
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)
 
-        // Combined Padding
-        addConstraintsWithFormat(format: "V:|-16-[v0]-16-[v1(1)]|", views: thumbnailImageView, seperatorView)
+        // Combined Padding - Vertical
+        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1(44)]-16-[v2(1)]|", views: thumbnailImageView, userProfileImageView, seperatorView)
+        
+        // Horizontal Padding for User Profile img View
+        addConstraintsWithFormat(format: "H:|-16-[v0(44)]", views: userProfileImageView)
         
         // Add Padding for Separator
         addConstraintsWithFormat(format: "H:|[v0]|", views: seperatorView)
