@@ -112,5 +112,8 @@ class VideoCell: UICollectionViewCell {
     }
 }
 
-
+// Extend UIVIew
+extension UIView {
+    
+}
 
