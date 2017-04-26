@@ -17,7 +17,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.title = "Home"
         
         // Register Cell ID
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
         
         collectionView?.backgroundColor = UIColor.white
     }
