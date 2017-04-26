@@ -79,7 +79,10 @@ class VideoCell: UICollectionViewCell {
         // Set BG Color to blue
         view.backgroundColor = UIColor.blue
         
-    }
+        // return view with data
+        return view
+        
+    }()
     
     func setupViews() {
         
