@@ -39,6 +39,13 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         return cell
     }
+    
+    // Set Cell Size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        // Screen Width (Stretchable per device) and fixed height of 200
+        return CGSize.init(width: view.frame.width, height: 200)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
