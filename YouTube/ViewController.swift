@@ -19,7 +19,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Register Cell ID
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
         
-        collectionView?.backgroundColor = UIColor.white
+        collectionView?.backgroundColor = UIColor.blue
     }
     
     // Number of items
@@ -116,7 +116,7 @@ extension UIView {
             let key = "v\(index)"
             
             // Prevent Conversion of contraints
-            imageView.translatesAutoresizingMaskIntoConstraints = false
+            view.translatesAutoresizingMaskIntoConstraints = false
             
             viewsDictionary[key] = view
         }
