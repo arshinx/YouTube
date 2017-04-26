@@ -68,7 +68,7 @@ class VideoCell: UICollectionViewCell {
     func setupViews() {
         
         
-        // addSubview(view: UIView)
+        addSubview(view: thumbnailImageView)
     }
     
     required init?(coder aDecoder: NSCoder) {
