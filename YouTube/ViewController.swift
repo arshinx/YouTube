@@ -31,7 +31,12 @@ class HomeController: UICollectionViewController {
     // Return cell data
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        // Create a reusable cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        
+        // Cell BG Color to Red
+        cell.backgroundColor = UIColor.red
+        
         return cell
     }
 
