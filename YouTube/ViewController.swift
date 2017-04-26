@@ -102,6 +102,9 @@ class VideoCell: UICollectionViewCell {
         // Init label()
         let label = UILabel()
         
+        // Purple BG
+        label.backgroundColor = UIColor.purple
+        
         // Return Label
         return label
     }()
