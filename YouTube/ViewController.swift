@@ -96,6 +96,8 @@ class VideoCell: UICollectionViewCell {
         addSubview(seperatorView)
         
         // Add Padding for Thumbnail Image View
+        addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)
+
         addConstraintsWithFormat(format: "V:|-16-[v0]-16-[v1(1)]", views: thumbnailImageView, seperatorView)
         
         // Add Padding for Separator
