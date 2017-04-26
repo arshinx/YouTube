@@ -46,13 +46,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Screen Width (Stretchable per device) and fixed height of 200
         return CGSize.init(width: view.frame.width, height: 200)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
 // New Class
