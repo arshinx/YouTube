@@ -70,7 +70,11 @@ class VideoCell: UICollectionViewCell {
         return imageView
     }()
     
-    
+    // Seperator
+    let seperatorView = UIView = {
+        
+        
+    }
     
     func setupViews() {
         
