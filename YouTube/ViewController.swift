@@ -61,7 +61,8 @@ class VideoCell: UICollectionViewCell {
         // Set BG Color to blue
         imageView.backgroundColor = UIColor.blue
         
-        
+        // Prevent Conversion of contraints
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         
         // return image view
         return imageView
