@@ -49,5 +49,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
 }
 
 // New Class
-
+class VideoCell: UICollectionViewCell {
+    
+}
 
