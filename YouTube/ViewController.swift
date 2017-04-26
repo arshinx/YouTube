@@ -13,6 +13,9 @@ class HomeController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set Nav title to Home
+        navigationItem.title = "Home"
+        
         collectionView?.backgroundColor = UIColor.white
     }
 
