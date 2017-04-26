@@ -101,7 +101,7 @@ class VideoCell: UICollectionViewCell {
         // Combine Padding
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-16-[v1(1)]", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": thumbnailImageView, "v1": seperatorView]))
 
-        // addConstraintsWithFormat(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-16-[v1(1)]", views: thumbnailImageView, seperatorView))
+        addConstraintsWithFormat(format: "V:|-16-[v0]-16-[v1(1)]", views: thumbnailImageView, seperatorView)
         
         // Add Padding for Separator
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": seperatorView]))
@@ -116,7 +116,17 @@ class VideoCell: UICollectionViewCell {
 extension UIView {
     
     // Add a simplified method to prevent repetition #DRY
-    func addConstraintsWithFormat(format: String, view: UIView...) {
+    func addConstraintsWithFormat(format: String, views: UIView...) {
+        
+        var viewsDictionary = [String: UIView]()
+        
+        for (index, view) in views.enumerated() {
+            let key = "v\(index)"
+            viewsDictionary[key] = view
+        }
+        
+        // Using default constraint add method
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
         
     }
 }
