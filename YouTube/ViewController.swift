@@ -19,7 +19,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Register Cell ID
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
         
-        collectionView?.backgroundColor = UIColor.blue
+        collectionView?.backgroundColor = UIColor.white
     }
     
     // Number of items
@@ -93,7 +93,7 @@ class VideoCell: UICollectionViewCell {
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)
 
         // Combined Padding
-        addConstraintsWithFormat(format: "V:|-16-[v0]-16-[v1(1)]", views: thumbnailImageView, seperatorView)
+        addConstraintsWithFormat(format: "V:|-16-[v0]-16-[v1(1)]|", views: thumbnailImageView, seperatorView)
         
         // Add Padding for Separator
         addConstraintsWithFormat(format: "H:|[v0]|", views: seperatorView)
