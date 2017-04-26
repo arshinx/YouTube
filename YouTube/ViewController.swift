@@ -58,6 +58,9 @@ class VideoCell: UICollectionViewCell {
         // initialize image view
         let imageView = UIImageView()
         
+        // Set BG Color to blue
+        imageView.backgroundColor = UIColor.blue
+        
         // return image view
         return imageView
     }
