@@ -97,7 +97,14 @@ class VideoCell: UICollectionViewCell {
     }()
     
     // Title Label
-    
+    let titleLabel : UILabel = {
+        
+        // Init label()
+        let label = UILabel()
+        
+        // Return Label
+        return label
+    }()
     
     // Sub Title Label
     
