@@ -63,9 +63,6 @@ class VideoCell: UICollectionViewCell {
         // Set BG Color to blue
         imageView.backgroundColor = UIColor.blue
         
-        // Prevent Conversion of contraints
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
         // return image view
         return imageView
     }()
@@ -78,9 +75,6 @@ class VideoCell: UICollectionViewCell {
         
         // Set BG Color to blue
         view.backgroundColor = UIColor.black
-        
-        // Prevent Conversion of contraints
-        view.translatesAutoresizingMaskIntoConstraints = false
         
         // return view with data
         return view
@@ -120,6 +114,10 @@ extension UIView {
         
         for (index, view) in views.enumerated() {
             let key = "v\(index)"
+            
+            // Prevent Conversion of contraints
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            
             viewsDictionary[key] = view
         }
         
