@@ -53,6 +53,15 @@ class VideoCell: UICollectionViewCell {
         setupViews()
     }
     
+    let thumbnailImageView : UIImageView = {
+        
+        // initialize image view
+        let imageView = UIImageView()
+        
+        // return image view
+        return imageView
+    }
+    
     func setupViews() {
         
         
