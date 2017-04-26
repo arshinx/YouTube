@@ -61,6 +61,8 @@ class VideoCell: UICollectionViewCell {
         // Set BG Color to blue
         imageView.backgroundColor = UIColor.blue
         
+        
+        
         // return image view
         return imageView
     }()
@@ -72,9 +74,7 @@ class VideoCell: UICollectionViewCell {
         
         // Add Padding
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[v0]-16-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": thumbnailImageView]))
-        
-        // Set Image view frame bounds
-        thumbnailImageView.frame = CGRect.init(x: 0, y: 0, width: 100, height: 100)
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[v0]-16-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": thumbnailImageView]))
         
         
     }
