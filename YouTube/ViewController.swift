@@ -91,6 +91,7 @@ class VideoCell: UICollectionViewCell {
         
         // Round Image
         imageView.layer.cornerRadius = 44 // half of width and height of frame
+        imageView.layer.masksToBounds = true
         
         // return image view
         return imageView
