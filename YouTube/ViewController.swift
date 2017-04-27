@@ -20,6 +20,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Disable Nav Bar Translucency
         navigationController?.navigationBar.isTranslucent = false
         
+        // Nav Bar Color
+        navigationController?.navigationBar.barTintColor = UIColor(red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
+        
         // Register Cell ID
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
         
