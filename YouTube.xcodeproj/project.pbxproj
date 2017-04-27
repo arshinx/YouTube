@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		732A411E1EB2984B00313D6A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732A411D1EB2984B00313D6A /* Extensions.swift */; };
 		732A41211EB29A8700313D6A /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732A41201EB29A8700313D6A /* VideoCell.swift */; };
+		732A41261EB29C6300313D6A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732A41251EB29C6300313D6A /* AudioToolbox.framework */; };
 		7362720D1EB1382D0092AF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362720C1EB1382D0092AF05 /* AppDelegate.swift */; };
 		7362720F1EB1382D0092AF05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362720E1EB1382D0092AF05 /* ViewController.swift */; };
 		736272121EB1382D0092AF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736272101EB1382D0092AF05 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		732A411D1EB2984B00313D6A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		732A41201EB29A8700313D6A /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		732A41231EB29C6300313D6A /* YouTube.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouTube.entitlements; sourceTree = "<group>"; };
+		732A41251EB29C6300313D6A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		736272091EB1382D0092AF05 /* YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7362720C1EB1382D0092AF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7362720E1EB1382D0092AF05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				732A41261EB29C6300313D6A /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,11 +67,20 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		732A41241EB29C6300313D6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				732A41251EB29C6300313D6A /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		736272001EB1382D0092AF05 = {
 			isa = PBXGroup;
 			children = (
 				7362720B1EB1382D0092AF05 /* YouTube */,
 				7362720A1EB1382D0092AF05 /* Products */,
+				732A41241EB29C6300313D6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +95,7 @@
 		7362720B1EB1382D0092AF05 /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
+				732A41231EB29C6300313D6A /* YouTube.entitlements */,
 				732A41221EB29B1500313D6A /* Controller */,
 				732A411F1EB299B900313D6A /* View */,
 				732A411C1EB2981A00313D6A /* Helpers */,
@@ -128,6 +142,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -295,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YouTube/YouTube.entitlements;
 				DEVELOPMENT_TEAM = 29YN3QBTM8;
 				INFOPLIST_FILE = YouTube/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -309,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YouTube/YouTube.entitlements;
 				DEVELOPMENT_TEAM = 29YN3QBTM8;
 				INFOPLIST_FILE = YouTube/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
