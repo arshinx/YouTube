@@ -40,8 +40,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     // Set Cell Size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        // Screen Width (Stretchable per device) and fixed height of 200
-        return CGSize.init(width: view.frame.width, height: 200)
+        // Calculate Cell height for 16:9 ratio
+        let height = (view.frame.width - 16 - 16) * 9 / 16
+        
+        // Screen Width (Stretchable per device) and Height: calculated height based on aspect ratio (16:9) + constraints
+        return CGSize.init(width: view.frame.width, height: height + 16 + 68)
     }
 }
 
