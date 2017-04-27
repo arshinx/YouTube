@@ -138,7 +138,7 @@ class VideoCell: UICollectionViewCell {
         textView.translatesAutoresizingMaskIntoConstraints = false
         
         // Set Text
-        textView.text = "TaylorSwiftVEVO • 1,604,687,607 views • 2 years"
+        textView.text = "TaylorSwiftVEVO • 1,604,687,607 views • 2 years ago"
         
         // Proper Left Alignment to keep in line with Title Label
         textView.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0)
@@ -191,7 +191,7 @@ class VideoCell: UICollectionViewCell {
         // Text View - Right Constraints
         addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
         // Text View - Height Constraints
-        addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
+        addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
     }
     
     required init?(coder aDecoder: NSCoder) {
