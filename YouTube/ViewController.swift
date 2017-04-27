@@ -140,6 +140,9 @@ class VideoCell: UICollectionViewCell {
         // Prevent Conversion of contraints
         textView.translatesAutoresizingMaskIntoConstraints = false
         
+        // Set Text
+        textView.text = "TaylorSwiftVEVO • 1,604,687,607 views • 2 years"
+        
         // return textview
         return textView
     }()
