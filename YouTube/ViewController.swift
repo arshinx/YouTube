@@ -154,16 +154,12 @@ class VideoCell: UICollectionViewCell {
         
         // Add Thumbnail Image View to View hierarchy
         addSubview(thumbnailImageView)
-        
         // Add Separator View to Hierarchy
         addSubview(seperatorView)
-        
         // Add User Profile Image View to View hierarchy
         addSubview(userProfileImageView)
-        
         // Add Title Label to View hierarchy
         addSubview(titleLabel)
-        
         // Add Text View to View hierarchy
         addSubview(subTitleTextView)
         
@@ -181,13 +177,10 @@ class VideoCell: UICollectionViewCell {
         
         // Title Label - Top Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: thumbnailImageView, attribute: .bottom, multiplier: 1, constant: 8))
-        
         // Title Label - Left Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1, constant: 8))
-        
         // Title Label - Right Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
-        
         // Title Label - Height Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
         
