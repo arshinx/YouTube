@@ -1,5 +1,6 @@
 //
 //  AppDelegate.swift
+//  Core Application Configuration
 //  YouTube
 //
 //  Created by Arshin Jain on 4/26/17.
