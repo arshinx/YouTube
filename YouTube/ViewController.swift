@@ -89,6 +89,9 @@ class VideoCell: UICollectionViewCell {
         // Set Image
         imageView.image = UIImage(named: "taylor_swift_profile")
         
+        // Round Image
+        imageView.layer.cornerRadius = 44 // half of width and height of frame
+        
         // return image view
         return imageView
         
