@@ -32,8 +32,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.titleView = titleLabel
         
         // Nav Bar Color
-        navigationController?.navigationBar.barTintColor = UIColor(red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
-        
+        navigationController?.navigationBar.barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)         
         // Register Cell ID
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
         
