@@ -1,9 +1,11 @@
 //
 //  ViewController.swift
+//  Home Feed UI For YouTube
 //  YouTube
 //
 //  Created by Arshin Jain on 4/26/17.
 //  Copyright © 2017 Arshin Jain. All rights reserved.
+//
 //
 
 import UIKit
@@ -40,8 +42,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     // Set Cell Size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        // Screen Width (Stretchable per device) and fixed height of 200
-        return CGSize.init(width: view.frame.width, height: 200)
+        // Calculate Cell height for 16:9 ratio
+        let height = (view.frame.width - 16 - 16) * 9 / 16
+        
+        // Screen Width (Stretchable per device) and Height: calculated height based on aspect ratio (16:9) + constraints
+        return CGSize.init(width: view.frame.width, height: height + 16 + 68)
     }
 }
 
@@ -104,8 +109,8 @@ class VideoCell: UICollectionViewCell {
         // Initialize View
         let view = UIView()
         
-        // Set BG Color to blue
-        view.backgroundColor = UIColor.black
+        // Set BG Color to a lighter shade of gray
+        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)
         
         // return view with data
         return view
@@ -138,7 +143,13 @@ class VideoCell: UICollectionViewCell {
         textView.translatesAutoresizingMaskIntoConstraints = false
         
         // Set Text
-        textView.text = "TaylorSwiftVEVO • 1,604,687,607 views • 2 years"
+        textView.text = "TaylorSwiftVEVO • 1,604,687,607 views • 2 years ago"
+        
+        // Proper Left Alignment to keep in line with Title Label
+        textView.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0)
+        
+        // Light Gray Text
+        textView.textColor = UIColor.lightGray
         
         // return textview
         return textView
@@ -148,16 +159,12 @@ class VideoCell: UICollectionViewCell {
         
         // Add Thumbnail Image View to View hierarchy
         addSubview(thumbnailImageView)
-        
         // Add Separator View to Hierarchy
         addSubview(seperatorView)
-        
         // Add User Profile Image View to View hierarchy
         addSubview(userProfileImageView)
-        
         // Add Title Label to View hierarchy
         addSubview(titleLabel)
-        
         // Add Text View to View hierarchy
         addSubview(subTitleTextView)
         
@@ -175,24 +182,21 @@ class VideoCell: UICollectionViewCell {
         
         // Title Label - Top Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .top, relatedBy: .equal, toItem: thumbnailImageView, attribute: .bottom, multiplier: 1, constant: 8))
-        
         // Title Label - Left Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1, constant: 8))
-        
         // Title Label - Right Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
-        
         // Title Label - Height Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
         
         // Sub Title Text View - Top Constraints
-        addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 8))
+        addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 4))
         // Text View - Left Constraints
         addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1, constant: 8))
         // Text View - Right Constraints
         addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
         // Text View - Height Constraints
-        addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
+        addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
     }
     
     required init?(coder aDecoder: NSCoder) {
