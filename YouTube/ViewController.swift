@@ -140,6 +140,9 @@ class VideoCell: UICollectionViewCell {
         // Set Text
         textView.text = "TaylorSwiftVEVO • 1,604,687,607 views • 2 years"
         
+        // Proper Left Alignment to keep in line with Title Label
+        textView.textContainerInset = UIEdgeInsetsMake(0, -8, 0, 0)
+        
         // return textview
         return textView
     }()
