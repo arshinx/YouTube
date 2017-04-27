@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarStyle = .lightContent
         // Status Bar BG (Create Manually
         let statusBarBackgroundView = UIView()
-        statusBarBackgroundView.backgroundColor = UIColor(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+        statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 35)
         
         // UINavigationBar.appearance().tintColor = UIColor(red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
         
