@@ -68,6 +68,7 @@ class VideoCell: UICollectionViewCell {
         imageView.image = UIImage(named: "taylor_swift_blank_space")
         
         // Scale Aspect Fill - Stetch to maintain original aspect ratio
+        imageView.contentMode = .scaleAspectFill
         
         // return image view
         return imageView
