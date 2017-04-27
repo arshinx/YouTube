@@ -1,5 +1,6 @@
 //
 //  AppDelegate.swift
+//  Core Application Configuration
 //  YouTube
 //
 //  Created by Arshin Jain on 4/26/17.
@@ -25,6 +26,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
         
+        // App Navigation Bar Design
+        
+        // White Status Bar
+        application.statusBarStyle = .lightContent
+        
+        // Status Bar BG (Create Manually
+        let statusBarBackgroundView = UIView()
+        statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 35)
+        
+        // Add Status Bar BG to View
+        window?.addSubview(statusBarBackgroundView)
+        // Staus Bar BG - Horizontal Constraints
+        window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
+        // Staus Bar BG - Vertical Constraints
+        window?.addConstraintsWithFormat(format: "V:|[v0(20)]|", views: statusBarBackgroundView)
         
         return true
     }
