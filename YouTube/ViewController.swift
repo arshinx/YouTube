@@ -121,6 +121,9 @@ class VideoCell: UICollectionViewCell {
         // BG Color
         textView.backgroundColor = UIColor.red
         
+        // Prevent Conversion of contraints
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        
         // return textview
         return textView
     }()
