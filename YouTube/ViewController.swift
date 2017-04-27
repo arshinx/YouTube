@@ -70,6 +70,9 @@ class VideoCell: UICollectionViewCell {
         // Scale Aspect Fill - Stetch to maintain original aspect ratio
         imageView.contentMode = .scaleAspectFill
         
+        // Image stays Within Bounds
+        imageView.clipsToBounds = true
+        
         // return image view
         return imageView
     }()
