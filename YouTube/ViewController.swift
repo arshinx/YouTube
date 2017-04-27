@@ -165,10 +165,6 @@ class VideoCell: UICollectionViewCell {
         
         // Title Label - Height Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
-        
-        // Title Label
-        // addConstraintsWithFormat(format: "V:[v0(20)]", views: titleLabel)
-        // addConstraintsWithFormat(format: "H:|[v0]|",   views: titleLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
