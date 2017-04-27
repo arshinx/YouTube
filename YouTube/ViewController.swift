@@ -121,6 +121,9 @@ class VideoCell: UICollectionViewCell {
         // Prevent Conversion of contraints
         label.translatesAutoresizingMaskIntoConstraints = false
         
+        // Set Label Text
+        label.text = "Taylor Swift - Blank Space"
+        
         // Return Label
         return label
     }()
