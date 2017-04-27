@@ -21,7 +21,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationController?.navigationBar.isTranslucent = false
         
         // Add Navigation Title
-        let titleLabel = UILabel()
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height)) // 32 = spacing
+        titleLabel.text = "Home"
+        titleLabel.textColor = UIColor.white
         navigationItem.titleView = titleLabel
         
         // Nav Bar Color
