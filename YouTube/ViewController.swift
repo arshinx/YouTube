@@ -32,7 +32,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.titleView = titleLabel
         
         // Nav Bar Color
-        navigationController?.navigationBar.barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)         
+        navigationController?.navigationBar.barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)
         // Register Cell ID
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
         
@@ -216,29 +216,6 @@ class VideoCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-}
-
-// Extend UIVIew
-extension UIView {
-    
-    // Add a simplified method to prevent repetition #DRY
-    func addConstraintsWithFormat(format: String, views: UIView...) {
-        
-        var viewsDictionary = [String: UIView]()
-        
-        for (index, view) in views.enumerated() {
-            let key = "v\(index)"
-            
-            // Prevent Conversion of contraints
-            view.translatesAutoresizingMaskIntoConstraints = false
-            
-            viewsDictionary[key] = view
-        }
-        
-        // Using default constraint add method
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
-        
     }
 }
 
