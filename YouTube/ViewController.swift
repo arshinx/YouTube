@@ -143,6 +143,9 @@ class VideoCell: UICollectionViewCell {
         // Proper Left Alignment to keep in line with Title Label
         textView.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0)
         
+        // Light Gray Text
+        textView.textColor = UIColor.lightGray
+        
         // return textview
         return textView
     }()
