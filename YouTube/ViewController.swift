@@ -17,6 +17,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         // Set Nav title to Home
         navigationItem.title = "Home"
+        // Disable Nav Bar Translucency
+        navigationController?.navigationBar.isTranslucent = false
         
         // Register Cell ID
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
