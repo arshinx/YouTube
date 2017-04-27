@@ -80,6 +80,9 @@ class VideoCell: UICollectionViewCell {
         // Set BG Color to blue
         imageView.backgroundColor = UIColor.green
         
+        // Set Image
+        imageView.image = UIImage(named: "taylor_swift_profile")
+        
         // return image view
         return imageView
         
