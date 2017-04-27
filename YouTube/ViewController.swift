@@ -146,9 +146,12 @@ class VideoCell: UICollectionViewCell {
         // Title Label - Left Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .left, relatedBy: .equal, toItem: userProfileImageView, attribute: .right, multiplier: 1, constant: 8))
         
+        // Title Label - Right Constraints
+        addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
+        
         // Title Label
-        addConstraintsWithFormat(format: "V:[v0(20)]", views: titleLabel)
-        addConstraintsWithFormat(format: "H:|[v0]|",   views: titleLabel)
+        // addConstraintsWithFormat(format: "V:[v0(20)]", views: titleLabel)
+        // addConstraintsWithFormat(format: "H:|[v0]|",   views: titleLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
