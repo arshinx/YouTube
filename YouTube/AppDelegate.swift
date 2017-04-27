@@ -47,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.addSubview(statusBarBackgroundView)
         // Staus Bar BG - Horizontal Constraints
         window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
+        // Staus Bar BG - Vertical Constraints
+        window?.addConstraintsWithFormat(format: "V:|[v0(20)]|", views: statusBarBackgroundView)
         
         return true
     }
