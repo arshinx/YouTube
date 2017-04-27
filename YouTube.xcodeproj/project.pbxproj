@@ -55,6 +55,14 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		732A41221EB29B1500313D6A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7362720E1EB1382D0092AF05 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		736272001EB1382D0092AF05 = {
 			isa = PBXGroup;
 			children = (
@@ -74,10 +82,10 @@
 		7362720B1EB1382D0092AF05 /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
+				732A41221EB29B1500313D6A /* Controller */,
 				732A411F1EB299B900313D6A /* View */,
 				732A411C1EB2981A00313D6A /* Helpers */,
 				7362720C1EB1382D0092AF05 /* AppDelegate.swift */,
-				7362720E1EB1382D0092AF05 /* ViewController.swift */,
 				736272101EB1382D0092AF05 /* Main.storyboard */,
 				736272131EB1382D0092AF05 /* Assets.xcassets */,
 				736272151EB1382D0092AF05 /* LaunchScreen.storyboard */,
