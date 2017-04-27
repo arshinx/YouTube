@@ -45,6 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Add Status Bar BG to View
         window?.addSubview(statusBarBackgroundView)
+        // Staus Bar BG - Horizontal Constraints
+        window?.addConstraintsWithFormat(format: "H:|[v0]|", views: statusBarBackgroundView)
         
         return true
     }
