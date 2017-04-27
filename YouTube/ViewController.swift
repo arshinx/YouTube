@@ -20,6 +20,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Disable Nav Bar Translucency
         navigationController?.navigationBar.isTranslucent = false
         
+        // Add Navigation Title
+        let titleLabel = UILabel()
+        navigationItem.titleView = titleLabel
+        
         // Nav Bar Color
         navigationController?.navigationBar.barTintColor = UIColor(red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
         
