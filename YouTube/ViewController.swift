@@ -118,9 +118,6 @@ class VideoCell: UICollectionViewCell {
         // Init label()
         let label = UILabel()
         
-        // Purple BG
-        label.backgroundColor = UIColor.purple
-        
         // Prevent Conversion of contraints
         label.translatesAutoresizingMaskIntoConstraints = false
         
