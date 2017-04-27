@@ -113,6 +113,17 @@ class VideoCell: UICollectionViewCell {
     }()
     
     // Sub Title Label
+    let subTitleTextView : UITextView = {
+        
+        // Init
+        let textView = UITextView()
+        
+        // BG Color
+        textView.backgroundColor = UIColor.red
+        
+        // return textview
+        return textView
+    }()
     
     func setupViews() {
         
@@ -148,6 +159,9 @@ class VideoCell: UICollectionViewCell {
         
         // Title Label - Right Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
+        
+        // Title Label - Height Constraints
+        addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
         
         // Title Label
         // addConstraintsWithFormat(format: "V:[v0(20)]", views: titleLabel)
