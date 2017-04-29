@@ -25,6 +25,9 @@ class MenuBar: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        // Add Collection View to Hierarchy
+        addSubview(collectionView)
+        
         // Set BG Color to NavBar Red
         backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
     }
