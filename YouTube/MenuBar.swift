@@ -30,8 +30,8 @@ class MenuBar: UIView {
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: collectionView)
         
-        // Set BG Color to NavBar Red
-        backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+        // Set Coolection View BG Color to NavBar's red shade
+        collectionView.backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
     }
     
     required init?(coder aDecoder: NSCoder) {
