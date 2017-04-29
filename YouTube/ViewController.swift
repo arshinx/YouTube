@@ -56,7 +56,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Add Horizontal Constraints - Menu Bar
         view.addConstraintsWithFormat(format: "H:|[v0]|", views: menuBar)
         // Add Vertical Constraints - Menu Bar
-        view.addConstraintsWithFormat(format: "V:|[v0(50)", views: menuBar)
+        view.addConstraintsWithFormat(format: "V:|[v0(50)]", views: menuBar)
         
     }
     
