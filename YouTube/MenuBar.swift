@@ -56,6 +56,9 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         // Create Cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
+        // Set BG
+        cell.backgroundView = UIColor.blue
+        
         // Return Cell
         return cell
     }
