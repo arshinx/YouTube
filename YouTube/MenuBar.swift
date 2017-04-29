@@ -19,6 +19,9 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         // Set Coolection View BG Color to NavBar's red shade
         cv.backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+        // Set Data Source and Delegate
+        cv.dataSource = self
+        cv.delegate = self
         // Return Collection View
         return cv
     }()
