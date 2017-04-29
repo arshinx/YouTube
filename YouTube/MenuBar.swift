@@ -26,6 +26,9 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         return cv
     }()
     
+    // Cell ID for reg.
+    let cellId = "cellId"
+    
     // Override
     override init(frame: CGRect) {
         super.init(frame: frame)
