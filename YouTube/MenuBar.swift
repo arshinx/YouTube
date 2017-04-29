@@ -13,7 +13,11 @@ class MenuBar: UIView {
     
     // Create a collection view
     let collectionView : UICollectionView = {
-       let cv = UICollectionView()
+        // layout
+        let layout = UICollectionViewFlowLayout()
+        // Collection View with layout
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        // Return Collection View
         return cv
     }()
     
