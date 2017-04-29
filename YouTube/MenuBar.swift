@@ -7,3 +7,8 @@
 //
 
 import UIKit
+
+// Menu Bar
+class MenuBar: UIView {
+    
+}
