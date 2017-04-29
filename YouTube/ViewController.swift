@@ -37,6 +37,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Register Cell ID
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
         
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        
         // Coll. view bg to Whtie
         collectionView?.backgroundColor = UIColor.white
         
