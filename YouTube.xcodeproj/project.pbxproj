@@ -15,7 +15,20 @@
 		736272121EB1382D0092AF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736272101EB1382D0092AF05 /* Main.storyboard */; };
 		736272141EB1382D0092AF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 736272131EB1382D0092AF05 /* Assets.xcassets */; };
 		736272171EB1382D0092AF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 736272151EB1382D0092AF05 /* LaunchScreen.storyboard */; };
+		73B11C1E1EB46E810098B4C1 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B11C1D1EB46E810098B4C1 /* MenuBar.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		73B11C1C1EB44DB50098B4C1 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.metal;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# metal\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		732A411D1EB2984B00313D6A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -29,6 +42,7 @@
 		736272131EB1382D0092AF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		736272161EB1382D0092AF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		736272181EB1382D0092AF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73B11C1D1EB46E810098B4C1 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				732A41201EB29A8700313D6A /* VideoCell.swift */,
+				73B11C1D1EB46E810098B4C1 /* MenuBar.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -120,6 +135,7 @@
 				736272071EB1382D0092AF05 /* Resources */,
 			);
 			buildRules = (
+				73B11C1C1EB44DB50098B4C1 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -190,6 +206,7 @@
 				732A41211EB29A8700313D6A /* VideoCell.swift in Sources */,
 				732A411E1EB2984B00313D6A /* Extensions.swift in Sources */,
 				7362720D1EB1382D0092AF05 /* AppDelegate.swift in Sources */,
+				73B11C1E1EB46E810098B4C1 /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
