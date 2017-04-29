@@ -14,6 +14,9 @@ class MenuBar: UIView {
     // Override
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        // Set BG Color to Blue
+        backgroundColor = UIColor.blue
     }
     
     required init?(coder aDecoder: NSCoder) {
