@@ -9,7 +9,7 @@
 import UIKit
 
 // Menu Bar
-class MenuBar: UIView {
+class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     
     // Create a collection view
     let collectionView : UICollectionView = {
