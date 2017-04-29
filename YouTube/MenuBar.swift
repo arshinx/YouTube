@@ -27,6 +27,8 @@ class MenuBar: UIView {
         
         // Add Collection View to Hierarchy
         addSubview(collectionView)
+        addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
+        addConstraintsWithFormat(format: "V:|[v0]|", views: collectionView)
         
         // Set BG Color to NavBar Red
         backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
