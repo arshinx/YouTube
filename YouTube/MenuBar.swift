@@ -64,7 +64,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     // Cell Size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: frame.width, height: frame.height)
+        return CGSize(width: frame.width / 4, height: frame.height)
     }
     
     required init?(coder aDecoder: NSCoder) {
