@@ -17,6 +17,8 @@ class MenuBar: UIView {
         let layout = UICollectionViewFlowLayout()
         // Collection View with layout
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        // Set Coolection View BG Color to NavBar's red shade
+        cv.backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
         // Return Collection View
         return cv
     }()
@@ -30,8 +32,7 @@ class MenuBar: UIView {
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: collectionView)
         
-        // Set Coolection View BG Color to NavBar's red shade
-        collectionView.backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
