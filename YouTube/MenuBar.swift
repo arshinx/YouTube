@@ -11,6 +11,12 @@ import UIKit
 // Menu Bar
 class MenuBar: UIView {
     
+    // Create a collection view
+    let collectionView : UICollectionView = {
+       let cv = UICollectionView()
+        return cv
+    }()
+    
     // Override
     override init(frame: CGRect) {
         super.init(frame: frame)
