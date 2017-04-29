@@ -36,8 +36,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         // Register Cell ID
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
-        // Have Thumbnail image (video cells) be properly visible 
+        // Have Thumbnail image (video cells) be properly visible
         collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        // Align Scroll
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
         
         // Coll. view bg to Whtie
         collectionView?.backgroundColor = UIColor.white
