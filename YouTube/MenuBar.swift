@@ -33,6 +33,9 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        // Register
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        
         // Add Collection View to Hierarchy
         addSubview(collectionView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
