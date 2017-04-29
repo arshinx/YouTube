@@ -51,7 +51,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     // Method to Set up Menu Bar
     private func setupMenuBar() {
-        
+        // Add Menu Bar to View Hierarchy
+        view.addSubview(MenuBar)
     }
     
     // Number of items
