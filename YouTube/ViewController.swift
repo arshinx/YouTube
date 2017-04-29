@@ -44,7 +44,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     // Method to Set up Menu Bar
-    func setupMenuBar() {
+    private func setupMenuBar() {
         
     }
     
