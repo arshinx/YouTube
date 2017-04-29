@@ -43,6 +43,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         setupMenuBar()
     }
     
+    // Menu Bar Object
+    let menuBar : MenuBar = {
+        let mb = MenuBar()
+        return mb
+    }()
+    
     // Method to Set up Menu Bar
     private func setupMenuBar() {
         
