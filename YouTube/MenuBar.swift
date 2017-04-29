@@ -11,4 +11,8 @@ import UIKit
 // Menu Bar
 class MenuBar: UIView {
     
+    // Override
+    override init(frame: CGRect) {
+        
+    }
 }
