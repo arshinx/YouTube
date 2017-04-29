@@ -36,7 +36,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Register Cell ID
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
         
+        // Coll. view bg to Whtie
         collectionView?.backgroundColor = UIColor.white
+        
+        // Setup Menu Bar
     }
     
     // Number of items
