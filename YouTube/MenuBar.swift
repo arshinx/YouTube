@@ -44,7 +44,11 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         return 4
     }
     
-    //
+    // Cell Selection
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        return UICollectionViewCell()
+    }
     
     
     required init?(coder aDecoder: NSCoder) {
