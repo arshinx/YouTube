@@ -12,7 +12,7 @@ import UIKit
 class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // Create a collection view
-    let collectionView : UICollectionView = {
+    lazy var collectionView : UICollectionView = {
         // layout
         let layout = UICollectionViewFlowLayout()
         // Collection View with layout
