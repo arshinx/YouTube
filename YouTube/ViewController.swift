@@ -44,12 +44,13 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Coll. view bg to Whtie
         collectionView?.backgroundColor = UIColor.white
         
-        // Setup Menu Bar - func call
-        setupMenuBar()
-        setupNavBarButtons()
+        setupMenuBar() // Setup Menu Bar
+        setupNavBarButtons() // Seup Nav Bar Buttons
     }
     
     func setupNavBarButtons() {
+        
+        // Right Bar Buttons
         
     }
     
