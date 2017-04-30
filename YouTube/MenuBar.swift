@@ -41,6 +41,10 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         addSubview(collectionView)
         addConstraintsWithFormat(format: "H:|[v0]|", views: collectionView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: collectionView)
+        
+        // Pre-Select first cell
+        let selectedIndexPath = IndexPath(item: 0, section: 0)
+        collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .centeredHorizontally)
     }
     
     // 4 Buttons
@@ -54,7 +58,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCell
         // Assign Image and enable template as rendering mode
         cell.imageView.image = UIImage(named: imageNames[indexPath.item])?.withRenderingMode(.alwaysTemplate)
-        cell.imageView.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13) // Add Darker Red Tint
+        cell.imageView.tintColor = (indexPath.item == 0) ? UIColor.white : UIColor.rgb(red: 91, green: 14, blue: 13) // Add Darker Red Tint
         // Return Cell
         return cell
     }
