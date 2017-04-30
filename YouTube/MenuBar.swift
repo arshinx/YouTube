@@ -76,6 +76,9 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
 // MenuCell class
 class MenuCell : BaseCell {
     
+    override func setupViews() {
+        super.setupViews()
+    }
 }
 
 
