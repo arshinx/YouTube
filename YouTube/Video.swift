@@ -8,4 +8,6 @@
 
 import UIKit
 
-
+class Video: NSObject {
+    
+}
