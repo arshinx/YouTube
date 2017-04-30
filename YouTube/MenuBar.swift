@@ -80,7 +80,7 @@ class MenuCell : BaseCell {
     // Add ImageView
     let imageView: UIImageView = {
         let iv = UIImageView() // Init. imageView
-        iv.image = UIImage(named: "home") // Image Name
+        iv.image = UIImage(named: "home")?.withRenderingMode(.alwaysTemplate) // Default Image Set with Rendering Mode Enabled
         iv.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13) // Add Darker Red Tint
         return iv // Return ImageView with Image Config
     }()
