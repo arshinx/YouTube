@@ -51,7 +51,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func setupNavBarButtons() {
         
         // Right Bar Buttons
-        
+        navigationItem.rightBarButtonItems = []
     }
     
     // Menu Bar Object
