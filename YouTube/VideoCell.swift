@@ -40,6 +40,11 @@ class VideoCell: BaseCell {
             }
             
             if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews {
+                
+                // Number Formatter
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .decimal
+                
                 let subTitleText = "\(channelName) • \(numberOfViews) • 2 years ago "
                 subTitleTextView.text = subTitleText
             }
