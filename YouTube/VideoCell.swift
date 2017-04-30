@@ -50,6 +50,9 @@ class VideoCell: BaseCell {
             }
             
             // Measure Title Text
+            if let title = video?.title {
+                let estimatedRect = NSString(string: title)
+            }
         }
     }
     
