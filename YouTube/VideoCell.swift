@@ -8,6 +8,11 @@
 
 import UIKit
 
+// Add a super class for better code organization and style
+class BaseCell: UICollectionViewCell {
+    
+}
+
 // New Class
 class VideoCell: UICollectionViewCell {
     
