@@ -198,12 +198,7 @@ class VideoCell: BaseCell {
         // Title Label - Right Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
         // Title Label - Height Constraints
-        
-        if titleLabel.numberOfLines == 1 {
-            titleLabelHeightConstraint = NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20)
-        } else {
-            titleLabelHeightConstraint = NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 44)
-        }
+        titleLabelHeightConstraint = NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 44)
         addConstraint(titleLabelHeightConstraint!)
         
         
