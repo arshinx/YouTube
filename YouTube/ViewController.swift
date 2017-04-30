@@ -12,6 +12,13 @@ import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    var videos: [Video] = {
+       var blankSpaceVideo = Video()
+        blankSpaceVideo.title = "Taylor Swift - Blank Space"
+        blankSpaceVideo.thumbnailImageName = "taylor_swift_blank_space"
+        return [blankSpaceVideo]
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
