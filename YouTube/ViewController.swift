@@ -52,7 +52,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Create Buttons
         let searchImage = UIImage(named: "search_icon")?.withRenderingMode(.alwaysOriginal)
         let searchBarButtonItem = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: #selector(handleSearch)) // Search Button
-        let moreButton = UIBarButtonItem(image: UIImage(named: "nav_more_icon"), style: .plain, target: self, action: #selector(handleMore)) // More Button
+        let moreButton = UIBarButtonItem(image: UIImage(named: "nav_more_icon")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMore)) // More Button
         // Right Bar Buttons
         navigationItem.rightBarButtonItems = [moreButton, searchBarButtonItem] // Add Buttons
     }
