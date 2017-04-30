@@ -46,6 +46,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         // Setup Menu Bar - func call
         setupMenuBar()
+        setupNavBarButtons()
+    }
+    
+    func setupNavBarButtons() {
+        
     }
     
     // Menu Bar Object
