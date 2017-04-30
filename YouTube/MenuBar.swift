@@ -88,7 +88,7 @@ class MenuCell : BaseCell {
     
     override var isHighlighted: Bool {
         didSet {
-            print(123)
+            imageView.tintColor = isHighlighted ? UIColor.white : UIColor.rgb(red: 91, green: 14, blue: 13) // tint white when selected
         }
     }
     
