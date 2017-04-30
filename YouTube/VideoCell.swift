@@ -11,15 +11,16 @@ import UIKit
 // Add a super class for better code organization and style
 class BaseCell: UICollectionViewCell {
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+    }
 }
 
 // New Class
 class VideoCell: UICollectionViewCell {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
+    
     
     // Views
     
