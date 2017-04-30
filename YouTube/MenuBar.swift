@@ -76,8 +76,9 @@ class MenuCell : BaseCell {
     
     // Add ImageView
     let imageView: UIImageView = {
-        let iv = UIImageView()
-        return iv
+        let iv = UIImageView() // Init. imageView
+        iv.image = UIImage(named: "") // Image Name
+        return iv // Return ImageView with Image Config
     }()
     
     override func setupViews() {
