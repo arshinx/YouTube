@@ -8,13 +8,27 @@
 
 import UIKit
 
-// New Class
-class VideoCell: UICollectionViewCell {
+// Add a super class for better code organization and style
+class BaseCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
     }
+    
+    func setupViews() {
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// VideoCell
+class VideoCell: BaseCell {
+    
+    
     
     // Views
     
@@ -113,7 +127,7 @@ class VideoCell: UICollectionViewCell {
         return textView
     }()
     
-    func setupViews() {
+    override func setupViews() {
         
         // Add Thumbnail Image View to View hierarchy
         addSubview(thumbnailImageView)
@@ -157,9 +171,7 @@ class VideoCell: UICollectionViewCell {
         addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    
 }
 
 

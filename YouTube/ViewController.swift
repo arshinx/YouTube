@@ -33,10 +33,53 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         // Nav Bar Color
         navigationController?.navigationBar.barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31)
+        
         // Register Cell ID
         collectionView?.register(VideoCell.self, forCellWithReuseIdentifier: "cellId")
+        // Have Thumbnail image (video cells) be properly visible
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        // Align Scroll
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
         
+        // Coll. view bg to Whtie
         collectionView?.backgroundColor = UIColor.white
+        
+        setupMenuBar() // Setup Menu Bar
+        setupNavBarButtons() // Seup Nav Bar Buttons
+    }
+    
+    func setupNavBarButtons() {
+        // Create Buttons
+        let searchImage = UIImage(named: "search_icon")?.withRenderingMode(.alwaysOriginal)
+        let searchBarButtonItem = UIBarButtonItem(image: searchImage, style: .plain, target: self, action: #selector(handleSearch)) // Search Button
+        let moreButton = UIBarButtonItem(image: UIImage(named: "nav_more_icon")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleMore)) // More Button
+        // Right Bar Buttons
+        navigationItem.rightBarButtonItems = [moreButton, searchBarButtonItem] // Add Buttons
+    }
+    
+    func handleSearch() {
+        print("Search Button Pressed")
+    }
+    
+    func handleMore() {
+        print("More Button Pressed")
+    }
+    
+    // Menu Bar Object
+    let menuBar : MenuBar = {
+        let mb = MenuBar()
+        return mb
+    }()
+    
+    // Method to Set up Menu Bar
+    private func setupMenuBar() {
+        // Add Menu Bar to View Hierarchy
+        view.addSubview(menuBar)
+        // Add Horizontal Constraints - Menu Bar
+        view.addConstraintsWithFormat(format: "H:|[v0]|", views: menuBar)
+        // Add Vertical Constraints - Menu Bar
+        view.addConstraintsWithFormat(format: "V:|[v0(50)]", views: menuBar)
+        
     }
     
     // Number of items

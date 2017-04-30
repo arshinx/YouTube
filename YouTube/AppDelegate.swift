@@ -35,6 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let statusBarBackgroundView = UIView()
         statusBarBackgroundView.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 35)
         
+        // Remove NavBar View Separator
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
         // Add Status Bar BG to View
         window?.addSubview(statusBarBackgroundView)
         // Staus Bar BG - Horizontal Constraints
