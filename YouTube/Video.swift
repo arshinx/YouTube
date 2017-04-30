@@ -13,3 +13,7 @@ class Video: NSObject {
     var thumbnailImageName: String?
     var title: String?
 }
+
+class Channel: NSObject {
+    
+}
