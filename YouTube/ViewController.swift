@@ -11,8 +11,10 @@
 import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
+    
     var videos: [Video] = {
+        var kanyeChannel = Channel()
+        
         var blankSpaceVideo = Video()
         blankSpaceVideo.title = "Taylor Swift - Blank Space"
         blankSpaceVideo.thumbnailImageName = "taylor_swift_blank_space"
