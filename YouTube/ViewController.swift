@@ -56,6 +56,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.rightBarButtonItems = []
     }
     
+    func handleSearch() {
+        print("Search Button Pressed")
+    }
+    
     // Menu Bar Object
     let menuBar : MenuBar = {
         let mb = MenuBar()
