@@ -28,7 +28,11 @@ class BaseCell: UICollectionViewCell {
 // VideoCell
 class VideoCell: BaseCell {
     
-    var video: Video?
+    var video: Video? {
+        didSet {
+            
+        }
+    }
     
     // Views
     
