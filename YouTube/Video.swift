@@ -11,4 +11,5 @@ import UIKit
 class Video: NSObject {
     
     var thumbnailImageName: String?
+    var title: String?
 }
