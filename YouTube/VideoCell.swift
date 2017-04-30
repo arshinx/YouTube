@@ -127,7 +127,7 @@ class VideoCell: BaseCell {
         return textView
     }()
     
-    func setupViews() {
+    override func setupViews() {
         
         // Add Thumbnail Image View to View hierarchy
         addSubview(thumbnailImageView)
