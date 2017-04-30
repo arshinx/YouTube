@@ -88,6 +88,7 @@ class MenuCell : BaseCell {
         addConstraintsWithFormat(format: "H:[v0(28)]", views: imageView) // Horizontal Constraints
         addConstraintsWithFormat(format: "V:[v0(28)]", views: imageView) // Vertical   Constraints
         addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)) // Horizontal Center
+        addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)) // Vertical Center
     }
 }
 
