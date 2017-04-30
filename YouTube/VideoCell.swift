@@ -37,6 +37,7 @@ class VideoCell: BaseCell {
             
             if let profileImageName = video?.channel?.profileImageName {
                 userProfileImageView.image = UIImage(named: profileImageName)
+                subTitleTextView.text = video?.channel?.name
             }
         }
     }
