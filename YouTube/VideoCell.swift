@@ -25,8 +25,8 @@ class BaseCell: UICollectionViewCell {
     }
 }
 
-// New Class
-class VideoCell: UICollectionViewCell {
+// VideoCell
+class VideoCell: BaseCell {
     
     
     
