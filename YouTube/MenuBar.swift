@@ -78,6 +78,8 @@ class MenuCell : BaseCell {
     
     override func setupViews() {
         super.setupViews()
+        
+        backgroundColor = UIColor.yellow // Set BG to yellow
     }
 }
 
