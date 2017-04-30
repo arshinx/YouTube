@@ -100,7 +100,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         // Create a reusable cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VideoCell
-        
+        cell.video = videos[indexPath.item]
         return cell
     }
     
