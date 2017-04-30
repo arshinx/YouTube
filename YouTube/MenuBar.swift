@@ -74,6 +74,12 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
 // MenuCell class
 class MenuCell : BaseCell {
     
+    // Add ImageView
+    let imageView: UIImageView = {
+        let iv = UIImageView()
+        return iv
+    }()
+    
     override func setupViews() {
         super.setupViews()
         
