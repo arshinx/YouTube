@@ -61,7 +61,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         print("Search Button Pressed")
     }
     
-    
+    func handleMore() {
+        print("More Button Pressed")
+    }
     
     // Menu Bar Object
     let menuBar : MenuBar = {
