@@ -54,6 +54,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCell
         // Assign Image and enable template as rendering mode
         cell.imageView.image = UIImage(named: imageNames[indexPath.item])?.withRenderingMode(.alwaysTemplate)
+        cell.imageView.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13) // Add Darker Red Tint
         // Return Cell
         return cell
     }
