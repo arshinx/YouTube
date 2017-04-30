@@ -16,7 +16,9 @@ class BaseCell: UICollectionViewCell {
         setupViews()
     }
     
-    
+    func setupViews() {
+        
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
