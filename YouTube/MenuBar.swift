@@ -77,14 +77,14 @@ class MenuCell : BaseCell {
     // Add ImageView
     let imageView: UIImageView = {
         let iv = UIImageView() // Init. imageView
-        iv.image = UIImage(named: "") // Image Name
+        iv.image = UIImage(named: "home") // Image Name
         return iv // Return ImageView with Image Config
     }()
     
     override func setupViews() {
         super.setupViews()
         
-        backgroundColor = UIColor.yellow // Set BG to yellow
+        addSubview(imageView) // ImageView to view hierarchy
     }
 }
 
