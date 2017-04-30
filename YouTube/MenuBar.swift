@@ -86,6 +86,12 @@ class MenuCell : BaseCell {
         return iv // Return ImageView with Image Config
     }()
     
+    override var isHighlighted: Bool {
+        didSet {
+            print(123)
+        }
+    }
+    
     override func setupViews() {
         super.setupViews()
         
