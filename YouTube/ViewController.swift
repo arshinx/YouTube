@@ -92,7 +92,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     // Number of items
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5 // automate in future
+        return videos.count // automate
     }
     
     // Return cell data
