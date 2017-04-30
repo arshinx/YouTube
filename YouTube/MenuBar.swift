@@ -85,6 +85,8 @@ class MenuCell : BaseCell {
         super.setupViews()
         
         addSubview(imageView) // ImageView to view hierarchy
+        addConstraintsWithFormat(format: "H:[v0(28)]", views: imageView) // Horizontal Constraints
+        addConstraintsWithFormat(format: "V:[v0(28)]", views: imageView) // Vertical   Constraints
     }
 }
 
