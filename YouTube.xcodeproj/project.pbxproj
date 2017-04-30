@@ -110,6 +110,7 @@
 		7362720B1EB1382D0092AF05 /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
+				73B11C1F1EB63EED0098B4C1 /* Model */,
 				732A41231EB29C6300313D6A /* YouTube.entitlements */,
 				732A41221EB29B1500313D6A /* Controller */,
 				732A411F1EB299B900313D6A /* View */,
@@ -121,6 +122,13 @@
 				736272181EB1382D0092AF05 /* Info.plist */,
 			);
 			path = YouTube;
+			sourceTree = "<group>";
+		};
+		73B11C1F1EB63EED0098B4C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
