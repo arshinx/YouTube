@@ -51,7 +51,9 @@ class VideoCell: BaseCell {
             
             // Measure Title Text
             if let title = video?.title {
-                let estimatedRect = NSString(string: title)
+                let size = CGSize(width: frame.width - 16 - 44 - 8 - 16, height: 1000)
+                let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+                let estimatedRect = NSString(string: title).boundingRect(with: size, options: options, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14)], context: nil)
             }
         }
     }
