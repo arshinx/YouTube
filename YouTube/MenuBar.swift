@@ -28,7 +28,7 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     
     // Cell ID for reg.
     let cellId = "cellId"
-    let imageNames = ["home", "trending", "descriptions", "account"] // Image Names as Array
+    let imageNames = ["home", "trending", "subscriptions", "account"] // Image Names as Array
     
     // Override
     override init(frame: CGRect) {
