@@ -52,6 +52,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                     
                     let video = Video()
                     video.title = dictionary["title"] as? String
+                    
                     self.videos?.append(video) // add video to videos collection/array
                 }
                 
