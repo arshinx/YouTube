@@ -51,15 +51,12 @@ class VideoCell: BaseCell {
             
             // Measure Title Text
             if let title = video?.title {
-                let size = CGSize(width: frame.width - 16 - 44 - 8 - 16, height: 1000)
-                let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
-                let estimatedRect = NSString(string: title).boundingRect(with: size, options: options, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14)], context: nil)
                 
                 
-                let textLimit = "Taylor Swift - Bad Blood Featuring Kendric"
-                print("TextLimit: \(textLimit.characters.count)")
+                //let textLimit = "Taylor Swift - Bad Blood Featuring Kendric" // Bounds - char limit
+                //print("TextLimit: \(textLimit.characters.count)")
                 
-                if (video?.title?.characters.count)! > 42 {
+                if (title.characters.count)! > 42 {
                     titleLabelHeightConstraint?.constant = 44
                 } else {
                     titleLabelHeightConstraint?.constant = 20
