@@ -73,18 +73,7 @@ class VideoCell: BaseCell {
     // Thumbnail Image Setup
     func setupThumbnailImage() {
         if let thumbnailImageURL = video?.thumbnailImageName {
-            
-            let url = URL(string: thumbnailImageURL)
-            URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
-                if error != nil {
-                    print(error)
-                    return
-                }
-                
-                DispatchQueue.main.async {
-                    self.thumbnailImageView.image = UIImage(data: data!) // display new images asynchronously
-                }
-            }).resume()
+            thumbnailImageView.loadImageUsingURLString(urlString: thumbnailImageURL)
         }
     }
     
