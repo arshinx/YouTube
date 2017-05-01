@@ -54,6 +54,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                     video.title = dictionary["title"] as? String
                     video.thumbnailImageName = dictionary["thumbnail_image_name"] as? String
                     
+                    let channelDictionary = dictionary["channel"] as! [String: AnyObject]
                     let channel = Channel()
                     self.videos?.append(video) // add video to videos collection/array
                 }
