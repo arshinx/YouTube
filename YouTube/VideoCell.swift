@@ -33,9 +33,7 @@ class VideoCell: BaseCell {
             titleLabel.text = video?.title // set title label
             
             setupProfileImage()
-            if let profileImageName = video?.channel?.profileImageName {
-                userProfileImageView.image = UIImage(named: profileImageName)
-            }
+            
             setupThumbnailImage()
             
             if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews {
@@ -64,7 +62,19 @@ class VideoCell: BaseCell {
     }
     
     func setupProfileImage() {
-        
+        if let profileImageURL = video?.channel?.profileImageName {
+            
+            let url = URL(string: profileImageURL)
+            URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                if error != nil {
+                    print(error)
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    self.userProfileImageView.image = UIImage(data: data!) // display new images asynchronously
+                }
+            }).resume()
     }
     
     // Thumbnail Image Setup
