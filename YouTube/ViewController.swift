@@ -34,7 +34,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     // Retrieve Videos with Metadeta
     func fetchVideos() {
-    
+        URLSession.shared.dataTask(with: <#T##URL#>, completionHandler: <#T##(Data?, URLResponse?, Error?) -> Void#>) /// Setup URLSession
     }
     
     override func viewDidLoad() {
