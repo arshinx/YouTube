@@ -33,9 +33,6 @@ class VideoCell: BaseCell {
             titleLabel.text = video?.title // set title label
             
             setupProfileImage()
-            if let profileImageName = video?.channel?.profileImageName {
-                userProfileImageView.image = UIImage(named: profileImageName)
-            }
             setupThumbnailImage()
             
             if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews {
