@@ -36,7 +36,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func fetchVideos() {
         let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            
+            // Exit if error
+            if error != nil {
+                print(error)
+                return
+            }
         }.resume() /// Setup URLSession
     }
     
