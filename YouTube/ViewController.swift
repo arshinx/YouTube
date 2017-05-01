@@ -54,6 +54,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                     video.title = dictionary["title"] as? String
                     self.videos?.append(video) // add video to videos collection/array
                 }
+                
+                self.collectionView?.reloadData() // update coll. view
+                
             } catch let jsonError {
                 print(jsonError)
             }
