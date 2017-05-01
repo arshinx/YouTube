@@ -54,7 +54,6 @@ class VideoCell: BaseCell {
                 
                 
                 //let textLimit = "Taylor Swift - Bad Blood Featuring Kendric" // Bounds - char limit
-                //print("TextLimit: \(textLimit.characters.count)")
                 
                 if (title.characters.count) > 42 {
                     titleLabelHeightConstraint?.constant = 44
