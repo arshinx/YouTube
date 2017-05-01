@@ -32,8 +32,16 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return [blankSpaceVideo, badBloodVideo]
     }()
     
+    // Retrieve Videos with Metadeta
+    func fetchVideos() {
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Fetch Videos
+        fetchVideos()
         
         // Set Nav title to Home
         navigationItem.title = "Home"
