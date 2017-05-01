@@ -64,6 +64,11 @@ class VideoCell: BaseCell {
     
     func setupThumbnailImage() {
         if let thumbnailImageURL = video?.thumbnailImageName {
+            
+            let url = URL(string: thumbnailImageURL)
+            URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+                
+            })
             print(thumbnailImageURL)
         }
     }
