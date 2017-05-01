@@ -65,6 +65,9 @@ class VideoCell: BaseCell {
     
     func setupProfileImage() {
         
+        if let profileImageURL = video?.channel?.profileImageName {
+            userProfileImageView.loadImageUsingURLString(urlString: profileImageURL)
+        }
     }
     
     // Thumbnail Image Setup
