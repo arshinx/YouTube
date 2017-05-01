@@ -183,7 +183,7 @@ class VideoCell: BaseCell {
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)
         
         // Combined Padding - Vertical
-        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1(44)]-16-[v2(1)]|", views: thumbnailImageView, userProfileImageView, seperatorView)
+        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1(44)]-28-[v2(1)]|", views: thumbnailImageView, userProfileImageView, seperatorView)
         
         // Horizontal Padding for User Profile img View
         addConstraintsWithFormat(format: "H:|-16-[v0(44)]", views: userProfileImageView)
