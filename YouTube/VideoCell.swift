@@ -134,6 +134,7 @@ class VideoCell: BaseCell {
         // Round Image
         imageView.layer.cornerRadius = 22 // half of width and height of frame
         imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleAspectFill
         
         // return image view
         return imageView
