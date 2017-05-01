@@ -32,6 +32,7 @@ class VideoCell: BaseCell {
         didSet {
             titleLabel.text = video?.title // set title label
             
+            setupProfileImage()
             if let profileImageName = video?.channel?.profileImageName {
                 userProfileImageView.image = UIImage(named: profileImageName)
             }
@@ -60,6 +61,10 @@ class VideoCell: BaseCell {
                 }
             }
         }
+    }
+    
+    func setupProfileImage() {
+        
     }
     
     // Thumbnail Image Setup
