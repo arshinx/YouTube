@@ -37,7 +37,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             
-        } /// Setup URLSession
+        }.resume() /// Setup URLSession
     }
     
     override func viewDidLoad() {
