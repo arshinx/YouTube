@@ -72,9 +72,6 @@ class VideoCell: BaseCell {
         // initialize image view
         let imageView = UIImageView()
         
-        // Set BG Color to blue
-        imageView.backgroundColor = UIColor.blue
-        
         // Set Image
         imageView.image = UIImage(named: "taylor_swift_blank_space")
         
