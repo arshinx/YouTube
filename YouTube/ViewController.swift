@@ -41,6 +41,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                 print(error)
                 return
             }
+            
+            let str = String(data: data!, encoding: String.Encoding.utf8)
+            print(str)
         }.resume() /// Setup URLSession
     }
     
