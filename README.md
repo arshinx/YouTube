@@ -33,4 +33,11 @@ YouTube UI for iOS 10.0 and Swift 3
 
 ##### Process Screens
 
-![home ui with navigation bar](https://cloud.githubusercontent.com/assets/12681734/25513240/a51f961c-2b88-11e7-8b23-5c066eb9a620.png) ![home ui layout implementation phase](https://cloud.githubusercontent.com/assets/12681734/25513346/567c0396-2b89-11e7-90f4-fa9767bf42f3.png)  ![home ui layout plan](https://cloud.githubusercontent.com/assets/12681734/25513340/4c1bd7a0-2b89-11e7-9482-8201ef33ef38.png) 
+###### Plan Layout: Setup Elements
+![home ui layout plan](https://cloud.githubusercontent.com/assets/12681734/25513340/4c1bd7a0-2b89-11e7-9482-8201ef33ef38.png) 
+
+###### Layout Phase II: Use Sample Data for Testing and Convenience — Additional Styling relative to Data
+![home ui layout implementation phase](https://cloud.githubusercontent.com/assets/12681734/25513346/567c0396-2b89-11e7-90f4-fa9767bf42f3.png)  
+
+###### Incorporate Sample Data and Implement NavBar
+![home ui with navigation bar](https://cloud.githubusercontent.com/assets/12681734/25513240/a51f961c-2b88-11e7-8b23-5c066eb9a620.png)
