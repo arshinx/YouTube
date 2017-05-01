@@ -41,9 +41,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                 print(error)
                 return
             }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+            } catch let jsonError {
+                print(jsonError)
+            }
             
-            let str = String(data: data!, encoding: String.Encoding.utf8)
-            print(str)
         }.resume() /// Setup URLSession
     }
     
