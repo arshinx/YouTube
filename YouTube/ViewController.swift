@@ -12,24 +12,28 @@ import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var videos: [Video] = {
-        var kanyeChannel = Channel()
-        kanyeChannel.name = "KanyeIsTheBestChannel"
-        kanyeChannel.profileImageName = "kanye_profile"
+//    var videos: [Video] = {
+//        var kanyeChannel = Channel()
+//        kanyeChannel.name = "KanyeIsTheBestChannel"
+//        kanyeChannel.profileImageName = "kanye_profile"
+//        
+//        var blankSpaceVideo = Video()
+//        blankSpaceVideo.title = "Taylor Swift - Blank Space"
+//        blankSpaceVideo.thumbnailImageName = "taylor_swift_blank_space"
+//        blankSpaceVideo.channel = kanyeChannel
+//        blankSpaceVideo.numberOfViews = 234746925
+//        
+//        var badBloodVideo = Video()
+//        badBloodVideo.title = "Taylor Swift - Bad Blood Featuring Kendrick Lamar"
+//        badBloodVideo.thumbnailImageName = "taylor_swift_bad_blood"
+//        badBloodVideo.channel = kanyeChannel
+//        badBloodVideo.numberOfViews = 524653463
+//        
+//        return [blankSpaceVideo, badBloodVideo]
+//    }()
+    
+    var videos: [video] = {
         
-        var blankSpaceVideo = Video()
-        blankSpaceVideo.title = "Taylor Swift - Blank Space"
-        blankSpaceVideo.thumbnailImageName = "taylor_swift_blank_space"
-        blankSpaceVideo.channel = kanyeChannel
-        blankSpaceVideo.numberOfViews = 234746925
-        
-        var badBloodVideo = Video()
-        badBloodVideo.title = "Taylor Swift - Bad Blood Featuring Kendrick Lamar"
-        badBloodVideo.thumbnailImageName = "taylor_swift_bad_blood"
-        badBloodVideo.channel = kanyeChannel
-        badBloodVideo.numberOfViews = 524653463
-        
-        return [blankSpaceVideo, badBloodVideo]
     }()
     
     // Retrieve Videos with Metadeta
@@ -45,7 +49,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
                 
                 for dictionary in json as! [[String: AnyObject]] {
-                    
+                 print(dictionary["title"])
                 }
             } catch let jsonError {
                 print(jsonError)
