@@ -40,7 +40,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             // Exit if error
             if error != nil {
-                print(error)
+                print(error!)
                 return
             }
             do {
