@@ -71,8 +71,8 @@ class VideoCell: BaseCell {
                     print(error)
                     return
                 }
+                self.thumbnailImageView.image = UIImage(data: data!)
             })
-            print(thumbnailImageURL)
         }
     }
     
