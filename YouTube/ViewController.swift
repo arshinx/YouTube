@@ -50,8 +50,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                 
                 for dictionary in json as! [[String: AnyObject]] {
                     
-                    self.video = Video()
-                    self.video.title = dictionary["title"] as! String
+                    let video = Video()
+                    video.title = dictionary["title"] as? String
                 }
             } catch let jsonError {
                 print(jsonError)
