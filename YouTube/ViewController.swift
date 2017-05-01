@@ -34,6 +34,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     // Retrieve Videos with Metadeta
     func fetchVideos() {
+        let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
         URLSession.shared.dataTask(with: <#T##URL#>, completionHandler: <#T##(Data?, URLResponse?, Error?) -> Void#>) /// Setup URLSession
     }
     
