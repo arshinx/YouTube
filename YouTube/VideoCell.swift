@@ -67,7 +67,10 @@ class VideoCell: BaseCell {
             
             let url = URL(string: thumbnailImageURL)
             URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
-                
+                if error != nil {
+                    print(error)
+                    return
+                }
             })
             print(thumbnailImageURL)
         }
