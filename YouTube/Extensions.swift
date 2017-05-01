@@ -42,4 +42,7 @@ extension UIView {
 // Extend UIImage View
 extension UIImageView {
     
+    func loadImageUsingURLString(urlString: String) {
+        
+    }
 }
