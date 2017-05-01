@@ -124,7 +124,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let height = (view.frame.width - 16 - 16) * 9 / 16
         
         // Screen Width (Stretchable per device) and Height: calculated height based on aspect ratio (16:9) + constraints
-        return CGSize.init(width: view.frame.width, height: height + 16 + 68)
+        return CGSize.init(width: view.frame.width, height: height + 16 + 80)
     }
 }
 
