@@ -43,6 +43,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             }
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+                print(json)
             } catch let jsonError {
                 print(jsonError)
             }
