@@ -72,7 +72,7 @@ class VideoCell: BaseCell {
                     return
                 }
                 self.thumbnailImageView.image = UIImage(data: data!)
-            })
+            }).resume()
         }
     }
     
