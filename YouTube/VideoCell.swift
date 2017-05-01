@@ -62,6 +62,7 @@ class VideoCell: BaseCell {
         }
     }
     
+    // Thumbnail Image Setup
     func setupThumbnailImage() {
         if let thumbnailImageURL = video?.thumbnailImageName {
             
