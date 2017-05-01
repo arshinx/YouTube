@@ -38,3 +38,8 @@ extension UIView {
         
     }
 }
+
+// Extend UIImage View
+extension UIImageView {
+    
+}
