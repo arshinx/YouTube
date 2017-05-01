@@ -63,7 +63,9 @@ class VideoCell: BaseCell {
     }
     
     func setupThumbnailImage() {
-        
+        if let thumbnailImageURL = video?.thumbnailImageName {
+            print(thumbnailImageURL)
+        }
     }
     
     // Views
