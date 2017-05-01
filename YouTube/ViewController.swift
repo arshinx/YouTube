@@ -32,7 +32,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
 //        return [blankSpaceVideo, badBloodVideo]
 //    }()
     
-    var videos: [video]? = {
+    var videos: [Video]? = {
         
     }()
     
