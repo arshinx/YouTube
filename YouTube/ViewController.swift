@@ -32,9 +32,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
 //        return [blankSpaceVideo, badBloodVideo]
 //    }()
     
-    var videos: [Video]? = {
-        
-    }()
+    var videos: [Video]?
     
     // Retrieve Videos with Metadeta
     func fetchVideos() {
@@ -143,7 +141,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Create a reusable cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VideoCell
         //cell.titleLabel.preferredMaxLayoutWidth = 150
-        cell.video = videos[indexPath.item]
+        cell.video = videos?[indexPath.item]
         return cell
     }
     
