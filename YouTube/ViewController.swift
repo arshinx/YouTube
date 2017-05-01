@@ -46,10 +46,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
                 
+                self.videos = [Video]()
+                
                 for dictionary in json as! [[String: AnyObject]] {
                     
-                    self.video = [Video]()
-                    video.title = dictionary["title"]
+                    self.video = Video()
+                    self.video.title = dictionary["title"] as! String
                 }
             } catch let jsonError {
                 print(jsonError)
