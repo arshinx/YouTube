@@ -113,7 +113,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         // Create a reusable cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VideoCell
+        //cell.titleLabel.preferredMaxLayoutWidth = 150
         cell.video = videos[indexPath.item]
+        print(cell.titleLabel.bounds.width)
         return cell
     }
     

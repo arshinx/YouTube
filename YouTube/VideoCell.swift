@@ -54,12 +54,15 @@ class VideoCell: BaseCell {
                 let size = CGSize(width: frame.width - 16 - 44 - 8 - 16, height: 1000)
                 let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
                 let estimatedRect = NSString(string: title).boundingRect(with: size, options: options, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14)], context: nil)
-                
+                /*
                 if estimatedRect.size.height > 20 {
                     titleLabelHeightConstraint?.constant = 44
+                    print("Title Label Height > 20: \(titleLabelHeightConstraint?.constant)?")
                 } else {
                     titleLabelHeightConstraint?.constant = 20
-                }
+                    print("Title Label Height < 20: \(titleLabelHeightConstraint?.constant)?")
+                }*/
+                print("Title Label Height DidSet: \(titleLabelHeightConstraint?.constant)?")
             }
         }
     }
@@ -135,8 +138,11 @@ class VideoCell: BaseCell {
         // Set Label Text
         label.text = "Taylor Swift - Blank Space"
         
+        //label.adjustsFontSizeToFitWidth = true
+        
         // Set No. of lines limit to 2
-        label.numberOfLines = 2
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
         
         // Return Label
         return label
@@ -200,6 +206,7 @@ class VideoCell: BaseCell {
         // Title Label - Height Constraints
         titleLabelHeightConstraint = NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 44)
         addConstraint(titleLabelHeightConstraint!)
+        print("Title Label Height A: \(titleLabelHeightConstraint?.constant)")
         
         
         // Sub Title Text View - Top Constraints
