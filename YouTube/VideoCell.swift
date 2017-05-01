@@ -31,13 +31,9 @@ class VideoCell: BaseCell {
     var video: Video? {
         didSet {
             titleLabel.text = video?.title // set title label
-            if let imageName = video?.thumbnailImageName {
-                thumbnailImageView.image = UIImage(named: imageName)
-            }
             
-            if let profileImageName = video?.channel?.profileImageName {
-                userProfileImageView.image = UIImage(named: profileImageName)
-            }
+            setupProfileImage()
+            setupThumbnailImage()
             
             if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews {
                 
@@ -52,16 +48,26 @@ class VideoCell: BaseCell {
             // Measure Title Text
             if let title = video?.title {
                 
-                
-                //let textLimit = "Taylor Swift - Bad Blood Featuring Kendric" // Bounds - char limit
-                //print("TextLimit: \(textLimit.characters.count)")
-                
                 if (title.characters.count) > 42 {
                     titleLabelHeightConstraint?.constant = 44
                 } else {
                     titleLabelHeightConstraint?.constant = 20
                 }
             }
+        }
+    }
+    
+    func setupProfileImage() {
+        
+        if let profileImageURL = video?.channel?.profileImageName {
+            userProfileImageView.loadImageUsingURLString(urlString: profileImageURL)
+        }
+    }
+    
+    // Thumbnail Image Setup
+    func setupThumbnailImage() {
+        if let thumbnailImageURL = video?.thumbnailImageName {
+            thumbnailImageView.loadImageUsingURLString(urlString: thumbnailImageURL)
         }
     }
     
@@ -72,9 +78,6 @@ class VideoCell: BaseCell {
         
         // initialize image view
         let imageView = UIImageView()
-        
-        // Set BG Color to blue
-        imageView.backgroundColor = UIColor.blue
         
         // Set Image
         imageView.image = UIImage(named: "taylor_swift_blank_space")
@@ -104,6 +107,7 @@ class VideoCell: BaseCell {
         // Round Image
         imageView.layer.cornerRadius = 22 // half of width and height of frame
         imageView.layer.masksToBounds = true
+        imageView.contentMode = .scaleAspectFill
         
         // return image view
         return imageView

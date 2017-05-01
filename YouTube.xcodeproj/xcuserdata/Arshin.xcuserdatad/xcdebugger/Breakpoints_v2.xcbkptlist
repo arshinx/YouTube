@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YouTube/VideoCell.swift"
-            timestampString = "515294219.812812"
+            timestampString = "515371974.685155"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "video"
             landmarkType = "24">
          </BreakpointContent>
@@ -25,46 +25,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "YouTube/VideoCell.swift"
-            timestampString = "515294219.812812"
+            filePath = "YouTube/ViewController.swift"
+            timestampString = "515371974.685155"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "video"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "YouTube.VideoCell.video.didset : Swift.Optional&lt;YouTube.Video&gt;"
-                  moduleName = "YouTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Arshin/Google%20Drive/Arshin/Production/YouTube/YouTube/VideoCell.swift"
-                  timestampString = "515282313.000476"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "908">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "YouTube.VideoCell.video.didset : Swift.Optional&lt;YouTube.Video&gt;"
-                  moduleName = "YouTube"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Arshin/Google%20Drive/Arshin/Production/YouTube/YouTube/VideoCell.swift"
-                  timestampString = "515282313.001956"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "1284">
-               </Location>
-            </Locations>
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "fetchVideos()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouTube/ViewController.swift"
+            timestampString = "515364167.327609"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "fetchVideos()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YouTube/ViewController.swift"
+            timestampString = "515371974.685155"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "fetchVideos()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
