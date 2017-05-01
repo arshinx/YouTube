@@ -28,7 +28,42 @@ class BaseCell: UICollectionViewCell {
 // VideoCell
 class VideoCell: BaseCell {
     
-    
+    var video: Video? {
+        didSet {
+            titleLabel.text = video?.title // set title label
+            if let imageName = video?.thumbnailImageName {
+                thumbnailImageView.image = UIImage(named: imageName)
+            }
+            
+            if let profileImageName = video?.channel?.profileImageName {
+                userProfileImageView.image = UIImage(named: profileImageName)
+            }
+            
+            if let channelName = video?.channel?.name, let numberOfViews = video?.numberOfViews {
+                
+                // Number Formatter
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .decimal
+                
+                let subTitleText = "\(channelName) • \(numberFormatter.string(from: numberOfViews)!) views • 2 years ago "
+                subTitleTextView.text = subTitleText
+            }
+            
+            // Measure Title Text
+            if let title = video?.title {
+                
+                
+                //let textLimit = "Taylor Swift - Bad Blood Featuring Kendric" // Bounds - char limit
+                //print("TextLimit: \(textLimit.characters.count)")
+                
+                if (title.characters.count) > 42 {
+                    titleLabelHeightConstraint?.constant = 44
+                } else {
+                    titleLabelHeightConstraint?.constant = 20
+                }
+            }
+        }
+    }
     
     // Views
     
@@ -101,6 +136,12 @@ class VideoCell: BaseCell {
         // Set Label Text
         label.text = "Taylor Swift - Blank Space"
         
+        //label.adjustsFontSizeToFitWidth = true
+        
+        // Set No. of lines limit to 2
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        
         // Return Label
         return label
     }()
@@ -127,6 +168,8 @@ class VideoCell: BaseCell {
         return textView
     }()
     
+    var titleLabelHeightConstraint: NSLayoutConstraint?
+    
     override func setupViews() {
         
         // Add Thumbnail Image View to View hierarchy
@@ -144,7 +187,7 @@ class VideoCell: BaseCell {
         addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)
         
         // Combined Padding - Vertical
-        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1(44)]-16-[v2(1)]|", views: thumbnailImageView, userProfileImageView, seperatorView)
+        addConstraintsWithFormat(format: "V:|-16-[v0]-8-[v1(44)]-36-[v2(1)]|", views: thumbnailImageView, userProfileImageView, seperatorView)
         
         // Horizontal Padding for User Profile img View
         addConstraintsWithFormat(format: "H:|-16-[v0(44)]", views: userProfileImageView)
@@ -159,7 +202,9 @@ class VideoCell: BaseCell {
         // Title Label - Right Constraints
         addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
         // Title Label - Height Constraints
-        addConstraint(NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
+        titleLabelHeightConstraint = NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 44)
+        addConstraint(titleLabelHeightConstraint!)
+        
         
         // Sub Title Text View - Top Constraints
         addConstraint(NSLayoutConstraint.init(item: subTitleTextView, attribute: .top, relatedBy: .equal, toItem: titleLabel, attribute: .bottom, multiplier: 1, constant: 4))

@@ -11,7 +11,27 @@
 import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
+    
+    var videos: [Video] = {
+        var kanyeChannel = Channel()
+        kanyeChannel.name = "KanyeIsTheBestChannel"
+        kanyeChannel.profileImageName = "kanye_profile"
+        
+        var blankSpaceVideo = Video()
+        blankSpaceVideo.title = "Taylor Swift - Blank Space"
+        blankSpaceVideo.thumbnailImageName = "taylor_swift_blank_space"
+        blankSpaceVideo.channel = kanyeChannel
+        blankSpaceVideo.numberOfViews = 234746925
+        
+        var badBloodVideo = Video()
+        badBloodVideo.title = "Taylor Swift - Bad Blood Featuring Kendrick Lamar"
+        badBloodVideo.thumbnailImageName = "taylor_swift_bad_blood"
+        badBloodVideo.channel = kanyeChannel
+        badBloodVideo.numberOfViews = 524653463
+        
+        return [blankSpaceVideo, badBloodVideo]
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,15 +105,16 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     // Number of items
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5 // automate in future
+        return videos.count // automate
     }
     
     // Return cell data
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // Create a reusable cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VideoCell
+        //cell.titleLabel.preferredMaxLayoutWidth = 150
+        cell.video = videos[indexPath.item]
         return cell
     }
     
@@ -104,7 +125,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let height = (view.frame.width - 16 - 16) * 9 / 16
         
         // Screen Width (Stretchable per device) and Height: calculated height based on aspect ratio (16:9) + constraints
-        return CGSize.init(width: view.frame.width, height: height + 16 + 68)
+        return CGSize.init(width: view.frame.width, height: height + 16 + 88)
     }
 }
 
