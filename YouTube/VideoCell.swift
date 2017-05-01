@@ -204,7 +204,6 @@ class VideoCell: BaseCell {
         // Title Label - Height Constraints
         titleLabelHeightConstraint = NSLayoutConstraint.init(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 44)
         addConstraint(titleLabelHeightConstraint!)
-        print("Title Label Height A: \(titleLabelHeightConstraint?.constant)")
         
         
         // Sub Title Text View - Top Constraints
