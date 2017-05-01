@@ -71,7 +71,10 @@ class VideoCell: BaseCell {
                     print(error)
                     return
                 }
-                self.thumbnailImageView.image = UIImage(data: data!)
+                
+                DispatchQueue.main.async {
+                    self.thumbnailImageView.image = UIImage(data: data!) // display new images asynchronously
+                }
             }).resume()
         }
     }
