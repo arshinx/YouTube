@@ -74,7 +74,7 @@ class VideoCell: BaseCell {
     // Views
     
     // Thumbnail Image View
-    let thumbnailImageView : UIImageView = {
+    let thumbnailImageView : CustomImageView = {
         
         // initialize image view
         let imageView = UIImageView()
