@@ -77,7 +77,7 @@ class VideoCell: BaseCell {
     let thumbnailImageView : CustomImageView = {
         
         // initialize image view
-        let imageView = UIImageView()
+        let imageView = CustomImageView()
         
         // Set Image
         imageView.image = UIImage(named: "taylor_swift_blank_space")
