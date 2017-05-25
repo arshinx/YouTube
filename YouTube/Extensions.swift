@@ -39,6 +39,8 @@ extension UIView {
     }
 }
 
+// Create an image cache
+
 // Extend UIImage View
 extension UIImageView {
     
