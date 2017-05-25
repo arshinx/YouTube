@@ -46,7 +46,6 @@ let imageCache = NSCache<NSString, UIImage>()
 class CustomImageView: UIImageView {
     
     var imageUrlString: String?
-    
     func loadImageUsingURLString(urlString: String) {
         
         imageUrlString = urlString
@@ -66,8 +65,11 @@ class CustomImageView: UIImageView {
             }
             DispatchQueue.main.async {
                 let imageToCache = UIImage(data: data!) // display new images asynchronously
+                if self.imageUrlString == urlString {
+                    self.image = imageToCache
+                }
                 imageCache.setObject(imageToCache!, forKey: urlString as NSString)
-                self.image = imageToCache
+                
             }
         }).resume()
         
