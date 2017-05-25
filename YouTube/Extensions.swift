@@ -58,6 +58,7 @@ extension UIImageView {
             }
             DispatchQueue.main.async {
                 let imageToCache = UIImage(data: data!) // display new images asynchronously
+                self.image = imageToCache
             }
         }).resume()
         
