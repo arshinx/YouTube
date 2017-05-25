@@ -51,6 +51,7 @@ extension UIImageView {
         
         image = nil
         
+        // load images from cache - if stored / already loaded once
         if let imageFromCache = imageCache.object(forKey: urlString as NSString) as? UIImage {
             self.image = imageFromCache
             return
