@@ -110,7 +110,7 @@ class VideoCell: BaseCell {
         imageView.contentMode = .scaleAspectFill
         
         // return image view
-        return imageView
+        return imageView as! CustomImageView
         
     }()
     
