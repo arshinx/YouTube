@@ -12,6 +12,8 @@ import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    let themeColor = UIColor.rgb(red: 231, green: 42, blue: 33)
+    
 //    var videos: [Video] = {
 //        var kanyeChannel = Channel()
 //        kanyeChannel.name = "KanyeIsTheBestChannel"
