@@ -52,7 +52,8 @@ extension UIImageView {
         image = nil
         
         if let imageFromCache = imageCache.object(forKey: urlString as NSString) as? UIImage {
-            
+            self.image = imageFromCache
+            return
         }
         
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
