@@ -45,6 +45,8 @@ let imageCache = NSCache<NSString, UIImage>()
 // Extend UIImage View
 class CustomImageView: UIImageView {
     
+    var imageUrlString: String?
+    
     func loadImageUsingURLString(urlString: String) {
         
         let url = URL(string: urlString)
