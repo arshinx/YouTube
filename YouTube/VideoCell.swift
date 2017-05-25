@@ -89,7 +89,7 @@ class VideoCell: BaseCell {
         imageView.clipsToBounds = true
         
         // return image view
-        return imageView as! CustomImageView
+        return imageView
     }()
     
     // User Profile Image View
@@ -110,7 +110,7 @@ class VideoCell: BaseCell {
         imageView.contentMode = .scaleAspectFill
         
         // return image view
-        return imageView as! CustomImageView
+        return imageView
         
     }()
     
