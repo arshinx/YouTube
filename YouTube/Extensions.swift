@@ -49,8 +49,8 @@ class CustomImageView: UIImageView {
     
     func loadImageUsingURLString(urlString: String) {
         
+        imageUrlString = urlString
         let url = URL(string: urlString)
-        
         image = nil
         
         // load images from cache - if stored / already loaded once
