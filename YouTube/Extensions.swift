@@ -40,6 +40,7 @@ extension UIView {
 }
 
 // Create an image cache
+let imageCache = NSCache<AnyObject, AnyObject>()
 
 // Extend UIImage View
 extension UIImageView {
