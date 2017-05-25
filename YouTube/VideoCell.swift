@@ -93,7 +93,7 @@ class VideoCell: BaseCell {
     }()
     
     // User Profile Image View
-    let userProfileImageView : UIImageView = {
+    let userProfileImageView : CustomImageView = {
         
         // initialize image view
         let imageView = UIImageView()
