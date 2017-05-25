@@ -96,7 +96,7 @@ class VideoCell: BaseCell {
     let userProfileImageView : CustomImageView = {
         
         // initialize image view
-        let imageView = UIImageView()
+        let imageView = CustomImageView()
         
         // Set BG Color to blue
         imageView.backgroundColor = UIColor.green
