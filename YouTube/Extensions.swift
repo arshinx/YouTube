@@ -51,7 +51,7 @@ extension UIImageView {
         
         image = nil
         
-        if let imageFromCache = imageCache.object(forKey: urlString) as? UIImage {
+        if let imageFromCache = imageCache.object(forKey: urlString as NSString) as? UIImage {
             
         }
         
