@@ -89,7 +89,7 @@ class VideoCell: BaseCell {
         imageView.clipsToBounds = true
         
         // return image view
-        return imageView
+        return imageView as! CustomImageView
     }()
     
     // User Profile Image View
